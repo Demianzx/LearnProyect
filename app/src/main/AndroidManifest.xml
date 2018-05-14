@@ -30,10 +30,6 @@
             android:name=".view.BottomBar"
             android:label="@string/title_activity_bottom_bar" />
         <activity android:name=".view.ClassActivity" />
-        <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
