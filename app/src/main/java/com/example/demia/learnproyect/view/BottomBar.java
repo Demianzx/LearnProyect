@@ -16,6 +16,7 @@ import com.example.demia.learnproyect.view.fragments.SearchFragment;
 public class BottomBar extends AppCompatActivity {
 
     private TextView mTextMessage;
+    //instanciar fragmentos
     HomeFragment homeFragment=new HomeFragment();
     ProfileFragment profileFragment=new ProfileFragment();
     SearchFragment searchFragment=new SearchFragment();
