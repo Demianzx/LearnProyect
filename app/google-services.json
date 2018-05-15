@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "55922711109",
+    "firebase_url": "https://newlearn-e2262.firebaseio.com",
+    "project_id": "newlearn-e2262",
+    "storage_bucket": "newlearn-e2262.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55922711109:android:1c4080a1fa3af181",
+        "android_client_info": {
+          "package_name": "com.example.demia.learnproyect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55922711109-pa88o029ann6fpe2rosgh47jlifmmfbj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.demia.learnproyect",
+            "certificate_hash": "abfb6ec0b169a2c0f41eb12a2e41f9cf0b740511"
+          }
+        },
+        {
+          "client_id": "55922711109-8tst01cg5hj9fh2lo08bgn8p3s47agv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfV3J-seBOGmFrLMplyMW7lhfsXy2IfiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55922711109-8tst01cg5hj9fh2lo08bgn8p3s47agv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
