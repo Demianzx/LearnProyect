@@ -1,8 +1,11 @@
 package com.example.demia.learnproyect.login.interactor;
 
+import android.app.Activity;
+
 import com.example.demia.learnproyect.login.presenter.LoginPresenter;
 import com.example.demia.learnproyect.login.repository.LoginRepository;
 import com.example.demia.learnproyect.login.repository.LoginRepositoryImpl;
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * Created by demia on 14/05/2018.
@@ -19,7 +22,7 @@ public class LoginInteractorImpl implements LoginInteractor{
     }
 
     @Override
-    public void singIn(String username, String password) {
-        repository.singIn(username,password);
+    public void singIn(String username, String password, Activity activity, FirebaseAuth firebaseAuth) {
+        repository.singIn(username,password,activity,firebaseAuth);
     }
 }

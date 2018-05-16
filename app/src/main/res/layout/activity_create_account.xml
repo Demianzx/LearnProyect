@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
 
-    tools:context="com.example.demia.learnproyect.view.CreateAccountActivity">
+    tools:context="com.example.demia.learnproyect.login.view.CreateAccountActivity">
 
 
     <include layout="@layout/actionbar_toolbar"/>
