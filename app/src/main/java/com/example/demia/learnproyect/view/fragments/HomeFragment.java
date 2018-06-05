@@ -34,9 +34,9 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        //showToolbar("Inicio",false,view);
-        RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureRecycler);
 
+        RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureRecycler);
+        //showToolbar("Inicio",false,view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
@@ -46,15 +46,19 @@ public class HomeFragment extends Fragment {
 
         picturesRecycler.setAdapter(pictureAdapterRecyclerView);
 
+        //setSupportActionBar(toolbar);
+        //toolbar.setTitle("Inicio");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
+
         return view;
     }
 
     public ArrayList<Picture> buildPictures (){
         ArrayList<Picture> pictures = new ArrayList<>();
-        pictures.add(new Picture("https://cdn.hispantv.com/hispanmedia/files/images/thumbnail/20180108/09101417_xl.jpg", "Algebra Lineal","4 dias","5"));
-        pictures.add(new Picture("https://dev-res.thumbr.io/libraries/45/01/lib/1370151995235.jpg?size=854x493s&ext=jpg", "Calculo Diferencial","8 dias","2"));
-        pictures.add(new Picture("http://moodle.ciep.cga.udg.mx/pluginfile.php/748/course/overviewfiles/banner-calculo-diferencial.png", "Calculo Vectorial","2 dias","1"));
-        pictures.add(new Picture("http://cdn2.wallpapersok.com/uploads/picture/627/62627/differencialnye-uravneniya.jpg", "Calculo Integral","3 dias","4"));
+        pictures.add(new Picture("https://cdn.hispantv.com/hispanmedia/files/images/thumbnail/20180108/09101417_xl.jpg", "Programacion Web","4 dias","5"));
+        pictures.add(new Picture("https://dev-res.thumbr.io/libraries/45/01/lib/1370151995235.jpg?size=854x493s&ext=jpg", "Introduccion a programacion","8 dias","2"));
+        pictures.add(new Picture("http://moodle.ciep.cga.udg.mx/pluginfile.php/748/course/overviewfiles/banner-calculo-diferencial.png", "Historia de las computadoras","2 dias","1"));
+        pictures.add(new Picture("http://cdn2.wallpapersok.com/uploads/picture/627/62627/differencialnye-uravneniya.jpg", "Ingenieria de software","3 dias","4"));
         pictures.add(new Picture("http://conceptodefinicion.de/wp-content/uploads/2014/07/Qu%C3%ADmica3-300x183.jpg", "Quimica","7 dias","7"));
         return pictures;
     }
@@ -68,4 +72,5 @@ public class HomeFragment extends Fragment {
 
 
     }*/
+
 }

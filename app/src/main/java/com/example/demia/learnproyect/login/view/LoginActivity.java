@@ -15,6 +15,12 @@ import com.example.demia.learnproyect.R;
 import com.example.demia.learnproyect.login.presenter.LoginPresenter;
 import com.example.demia.learnproyect.login.presenter.LoginPresenterImpl;
 import com.example.demia.learnproyect.view.BottomBar;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.*;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -22,27 +28,37 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
 
     private EditText username, password;
     private Button login;
+    private Button loginButton;
     private ProgressBar progressBarLogin;
     private LoginPresenter presenter;
 
     private static final String TAG = "LoginRepositoryImpl";
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
-
+    private CallbackManager callbackManager;
     //@SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
+
+        FacebookSdk.sdkInitialize(this.getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
+        //AppEventsLogger.activateApp(this);
+
         username= (EditText) findViewById(R.id.username);
         password= (EditText) findViewById(R.id.password);
         login=(Button) findViewById(R.id.login);
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+        //loginbuttonFacebook.setReadPermissions("email");
         progressBarLogin=(ProgressBar) findViewById(R.id.progressbarLogin);
 
         presenter = new LoginPresenterImpl(this);
         hideProgressBar();
 
         firebaseAuth = FirebaseAuth.getInstance();
+        //loginButton
         authStateListener=new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -61,7 +77,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
 
             }
         });
+
     }
+
+
 
     private void signIn(String username, String password) {
         presenter.singIn(username,password,this,firebaseAuth);
