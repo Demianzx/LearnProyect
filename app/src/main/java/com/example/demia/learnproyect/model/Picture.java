@@ -9,16 +9,26 @@ public class Picture {
     private String userName;
     private String time;
     private String like_number = "0";
+    private String descripcion;
 
-    public Picture(String picture, String userName, String time, String like_number) {
+    public Picture(String picture, String userName, String time, String like_number,String descripcion) {
         this.picture = picture;
         this.userName = userName;
         this.time = time;
         this.like_number = like_number;
+        this.descripcion=descripcion;
     }
 
     public String getPicture() {
         return picture;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public void setPicture(String picture) {

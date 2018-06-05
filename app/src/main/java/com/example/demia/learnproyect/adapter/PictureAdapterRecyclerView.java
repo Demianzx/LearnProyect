@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import com.example.demia.learnproyect.R;
 import com.example.demia.learnproyect.model.Picture;
-import com.example.demia.learnproyect.view.ClassActivity;
-import com.example.demia.learnproyect.view.fragments.CursoActivity;
+import com.example.demia.learnproyect.view.CursoActivity;
+import com.example.demia.learnproyect.view.fragments.IntroCurso;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -26,11 +26,13 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
     private ArrayList<Picture> pictures;
     private int resource;
     private Activity activity;
+    IntroCurso cursoActivity = new IntroCurso();
 
     public PictureAdapterRecyclerView(ArrayList<Picture> pictures, int resource, Activity activity) {
         this.pictures = pictures;
         this.resource = resource;
         this.activity = activity;
+
     }
 
     @Override
@@ -51,7 +53,7 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
         holder.picture_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(activity, CursoActivity.class);
+                Intent intent =new Intent(activity, cursoActivity.class);
                 activity.startActivity(intent);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.demia.learnproyect.view.fragments;
+package com.example.demia.learnproyect.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
