@@ -26,7 +26,7 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
     private ArrayList<Picture> pictures;
     private int resource;
     private Activity activity;
-    IntroCurso cursoActivity = new IntroCurso();
+
 
     public PictureAdapterRecyclerView(ArrayList<Picture> pictures, int resource, Activity activity) {
         this.pictures = pictures;
@@ -53,10 +53,13 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
         holder.picture_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(activity, cursoActivity.class);
+                Intent intent=new Intent(activity,CursoActivity.class);
                 activity.startActivity(intent);
             }
         });
+
+
+
     }
 
     @Override

@@ -12,10 +12,10 @@ import com.example.demia.learnproyect.R;
 
 
 
-public class curso_test extends Fragment {
+public class CursoTest extends Fragment {
 
 
-    public curso_test() {
+    public CursoTest() {
         // Required empty public constructor
     }
 

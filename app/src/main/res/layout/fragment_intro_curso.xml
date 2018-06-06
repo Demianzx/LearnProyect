@@ -5,9 +5,47 @@
     tools:context="com.example.demia.learnproyect.view.fragments.IntroCurso">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/classPicture"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/math"
+                />
+            <TextView
+                android:id="@+id/classTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="Programacion web"
+                android:textColor="@color/editTextColorWhite"
+                />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/classDescription"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:text="Desarrollo web es un término que define la creación de sitios web para Internet o una intranet. En este pequeño curso aprenderas terminos basicos"/>
+        <Button
+            android:id="@+id/classButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Continuar"
+            android:background="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+
 
 </FrameLayout>
