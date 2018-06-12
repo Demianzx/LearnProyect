@@ -10,13 +10,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
     <ImageView
+        android:id="@+id/curso_lectura_imagen"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
     <TextView
+        android:id="@+id/curso_lectura_texto"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:text="@string/hello_blank_fragment" />
+        android:text="La programación de los sitios web es una de las disciplinas dentro del mundo de Internet que más se ha desarrollado y no deja de sorprender día a día con las posibilidades que abre y genera, ya que no sólo consigue satisfacer necesidades que se generan, sino que sin la generación de necesidades ofrecen servicios a los usuarios que éstos no habían imaginado." />
         <Button
+            android:id="@+id/curso_lectura_boton"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"

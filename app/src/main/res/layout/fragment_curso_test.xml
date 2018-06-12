@@ -12,6 +12,11 @@
         android:layout_margin="50dp"
         android:orientation="vertical"
         >
+        <TextView
+            android:id="@+id/curso_test_pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejemplicame esto"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +28,8 @@
             <TextView
                 android:id="@+id/textoRespuesta1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Esta no es"/>
 
         </LinearLayout>
         <LinearLayout
@@ -37,7 +43,8 @@
             <TextView
                 android:id="@+id/textoRespuesta2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="ya casi llegas"/>
 
         </LinearLayout>
         <LinearLayout
@@ -51,11 +58,12 @@
             <TextView
                 android:id="@+id/textoRespuesta3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Esta mera es"/>
 
         </LinearLayout>
         <Button
-            android:id="@+id/siguientePagina"
+            android:id="@+id/siguientePaginaTest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Siguiente"

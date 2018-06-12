@@ -26,6 +26,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".login.view.LoginActivity" />
         </activity>
+        <activity android:name=".view.CursoActivity">
+
+        </activity>
         <activity android:name=".view.ContainerActivity" />
         <activity
             android:name=".view.BottomBar"
@@ -52,7 +55,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.CursoActivity"></activity>
+
     </application>
 
 </manifest>

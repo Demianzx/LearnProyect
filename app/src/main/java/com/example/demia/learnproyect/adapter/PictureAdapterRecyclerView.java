@@ -44,7 +44,7 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
 
     @Override
     public void onBindViewHolder(PictureViewHolder holder, int position) {
-        Picture picture= pictures.get(position);
+        final Picture picture= pictures.get(position);
         holder.usernameCard.setText(picture.getUserName());
         holder.timeCard.setText(picture.getTime());
         holder.likenumberCard.setText(picture.getLike_number());
@@ -54,6 +54,18 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(activity,CursoActivity.class);
+                intent.putExtra("titulo",picture.getUserName().toString());
+                intent.putExtra("descripcion",picture.getDescripcion().toString());
+                intent.putExtra("picture",picture.getPicture().toString());
+                intent.putExtra("picture",picture.getPicture().toString());
+                intent.putExtra("explicacion",picture.getExplicacion().toString());
+                intent.putExtra("pregunta",picture.getPregunta().toString());
+                intent.putExtra("respuesta1",picture.getRespuesta1().toString());
+                intent.putExtra("respuesta2",picture.getRespuesta2().toString());
+                intent.putExtra("respuesta3",picture.getRespuesta3().toString());
+                intent.putExtra("correcta",picture.getCorrecta().toString());
+                //intent.putExtra("correcta",picture.getCorrecta().toString());
+
                 activity.startActivity(intent);
             }
         });

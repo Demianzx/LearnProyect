@@ -1,15 +1,16 @@
 package com.example.demia.learnproyect.model;
 
 /**
- * Created by demia on 05/06/2018.
+ * Created by demia on 11/06/2018.
  */
 
-public class ClaseLectura {
+public class ClaseDescripcion {
     private String titulo;
     private String picture;
     private String descripcion;
 
-    public ClaseLectura(String titulo, String picture, String descripcion) {
+    public ClaseDescripcion(String titulo, String picture, String descripcion) {
+
         this.titulo = titulo;
         this.picture = picture;
         this.descripcion = descripcion;
@@ -38,4 +39,6 @@ public class ClaseLectura {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+
 }

@@ -1,9 +1,12 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.demia.learnproyect.view.fragments.IntroCurso">
+    tools:context="com.example.demia.learnproyect.view.fragments.IntroCurso"
 
+    >
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +20,7 @@
                 android:id="@+id/classPicture"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@drawable/math"
+                android:background="@color/colorPrimaryDark"
                 />
             <TextView
                 android:id="@+id/classTittle"
@@ -26,6 +29,7 @@
                 android:layout_gravity="bottom"
                 android:text="Programacion web"
                 android:textColor="@color/editTextColorWhite"
+                android:textSize="20dp"
                 />
 
         </FrameLayout>
@@ -48,4 +52,4 @@
 
 
 
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
