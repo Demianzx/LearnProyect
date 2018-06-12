@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.demia.learnproyect.R;
 import com.example.demia.learnproyect.view.BottomBar;
@@ -23,6 +24,7 @@ Button button;
 boolean correcto;
 
     public Resultado(boolean correcto) {
+
         this.correcto = correcto;
     }
 
@@ -30,6 +32,13 @@ boolean correcto;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_resultado, container, false);
+        TextView resultado=(TextView)view.findViewById(R.id.claseResultado);
+
+        if(correcto==true)resultado.setText("Felicidades has aprobado");
+        else resultado.setText("Lastima, Sigue intentando");
+
+        //resultado.setText();
+
         button =(Button) view.findViewById(R.id.claseFinalizar);//inflater.inflate(R.layout.fragment_intro_curso,container,false).findViewById(R.id.classButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

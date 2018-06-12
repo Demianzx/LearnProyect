@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -30,7 +31,7 @@ public class CursoTest extends Fragment {
     String respuesta1;
     String respuesta2;
     String respuesta3;
-    int correcto;
+    String correcto;
     boolean acertado=false;
 
     public CursoTest(String pregunta, String respuesta1, String respuesta2, String respuesta3, String correcto) {
@@ -39,7 +40,7 @@ public class CursoTest extends Fragment {
         this.respuesta1 = respuesta1;
         this.respuesta2 = respuesta2;
         this.respuesta3 = respuesta3;
-        this.correcto = Integer.parseInt(correcto);
+        this.correcto = correcto;
     }
 
     @Override
@@ -67,17 +68,37 @@ public class CursoTest extends Fragment {
         respuesta3TV.setText(respuesta3);
 
 
+        r1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                r2.setChecked(false);
+                r3.setChecked(false);
+                if(correcto.equals("1")){
+                    acertado=true;
+                }else acertado=false;
+            }
+        });
+        r2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                r1.setChecked(false);
+                r3.setChecked(false);
+                if(correcto.equals("2")){
+                    acertado=true;
+                }else acertado =false;
+            }
+        });
+        r3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                r1.setChecked(false);
+                r2.setChecked(false);
+                if(correcto.equals("3")){
+                    acertado=true;
+                }else acertado=false;
+            }
+        });
 
-        if(r1.isChecked()==true){
-            r2.setChecked(false);
-            r3.setChecked(false);
-        }else if(r2.isChecked()==true){
-            r1.setChecked(false);
-            r3.setChecked(false);
-        }else{
-            r1.setChecked(false);
-            r2.setChecked(false);
-        }
 
 
 
@@ -86,6 +107,24 @@ public class CursoTest extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
+                /*
+                if(r1.isChecked()&&correcto.equals("1")){
+                    //acertado=true;
+                    resultado=new Resultado(acertado);
+                }else if(r2.isChecked()&&correcto.equals("2")){
+                    //acertado=true;
+                    resultado=new Resultado(acertado);
+                }else if(r3.isChecked()&&correcto.equals("3")){
+                    //acertado=true;
+                    resultado=new Resultado(acertado);
+                }else {
+                    //acertado=false;
+                    resultado=new Resultado(acertado);
+                }
+                */
 
                 resultado=new Resultado(acertado);
                 transicionFragment(resultado);
@@ -104,6 +143,7 @@ public class CursoTest extends Fragment {
         super.onAttach(context);
 
     }
+
 
     @Override
     public void onDetach() {
